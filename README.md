@@ -1,5 +1,8 @@
 # hackturabo2016
 
-place holder Readme
-no project idea yet
-lorem ipsum whatever
+¿Que vamos hacel?
+
+A helpfull concensus generating tool,
+that help friends and teams make though
+decissions based on similar prefference
+and a few enviromental factors. 
