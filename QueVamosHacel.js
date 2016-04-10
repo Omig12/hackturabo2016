@@ -1,37 +1,38 @@
-// Javascript Para que vamos a hacer //
+var numUser = 0;
+var options = new Array;
 
-document.getElementById("demo").innerHTML = "Hello World";
-
-function htmlEdit() {
-	document.getElementById("demo").innerHTML = "Hello World";
-	
-	// Equals an ordered array of ints (1 to k) were k is the number of users. 
-	var id = [1,2,3,4];
-	// An array of choices of size k
-	var array {
-	};
-	// User Id List paired with  
-	var user = {id[], };	
-	var ranking 
-	
-//  List of choices submitted per one Choice per User paired with a value
-	var choice = { 
-		UserId: int,
-		choices: {},
-		val: {}; 
-	0,};	
-	
-	
-	// Needs to take a list of ranked elements
-	function getList() {
-	
-		return lists;
-	}
-	function weight(lists, )  {
-		
-	}	
+function get_input(item) {
+	var item = readline();
+	return item;	
 }
 
+print("Enter amount of users: ");	
+numUser = get_input();
+print("Enter your option: ");
+for (var i = 0; i < numUser; i++) {
+	options[i] = get_input();
+}
 
-	choice {pineapple, 0}, {apple, 0} , lemon]}
-	
+function msg(){
+
+
+	print("Filling you with malanga!");}
+msg();
+
+var userArray = new Array(numUser);
+for (var i = 0; i < numUser; i++) {
+	userArray[i] = new Array(numUser);
+	for (var k = 0; k < numUser; k++) {
+		userArray[i][k] = "Malanga";
+	}
+}
+
+function stubs() {
+	print("Enter array index: ");
+	print(id[get_input()]);
+	print( "Total num users: " + numUser);	}
+
+print("\nuser preference: ");
+for (var i = 0; i < numUser; i++) {
+	print(userArray[i]);
+}
