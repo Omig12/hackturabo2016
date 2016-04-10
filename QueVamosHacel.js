@@ -1,11 +1,13 @@
 /* Javascript back-end for Quevamosahacer? */
 
 //  Stores amount of friends
-var numUser = 0;
+var numUser = undefined;
 // Stores possible choices list
 var options = new Array;
 // Stores budget
 var budget = undefined;
+// Stores max distance
+var distance = undefined;
 
 // General input helper
 function get_input() {
@@ -47,16 +49,13 @@ for (var i = 0; i < numUser; i++) {
 }
 
 //Jose part
-// Get user budgets
-print("\nEnter your budget (in USD): ")
-function getBudget() {
-    var budget = get_input();
-    return budget;
-};
-getBudget();
+// Get user budget
+print("\nEnter your budget (in USD): ");
+budget = get_input();
 
 // Get user distance
-function distance() {};
+print("\nEnter your max distance: ");
+distance = get_input();
 
 //Israel part
 // Search google for top_hit
