@@ -2,22 +2,22 @@
 
 //  Stores amount of friends
 var numUser = 0;
-// Stores posible choices list
+// Stores possible choices list
 var options = new Array;
 
 // General input helper
 function get_input(item) {
 	var item = readline();
-	return item;	
+	return item;
 }
 
 // Get number of users
-print("Enter amount of users: ");	
+print("Enter amount of users: ");
 numUser = get_input();
 
 print("Enter your option: ");
 for (var i = 0; i < numUser; i++) {
-	console.log(i + ") ");	
+	print(i + ") ");
 	options[i] = get_input();
 }
 
