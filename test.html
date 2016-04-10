@@ -35,10 +35,9 @@
 	var locationSuccess = function (pos) {
 	var coordinates = pos.coords;
 	    console.log('MY location= lat:' + coordinates.latitude + ', long: ' + coordinates.longitude + ', alt: ' + coordinates.altitude);
-	    lat = coordinates.latitude.toFixed(2);
-	    lon = coordinates.longitude.toFixed(2);
-	    alt = coordinates.altitude.toFixed(2);
-	// TODO
+	    laty = coordinates.latitude.toFixed(2);
+	    lony = coordinates.longitude.toFixed(2);
+	    alt = coordinates.altitude.toFixed(2);	
 	};
 	var locationError = function (err) {
 	console.warn('location error (' + err.code + '): ' + err.message);
@@ -52,8 +51,7 @@
 
 
       function initMap() {
-        var pyrmont = {lat: laty, lng: lony};
-
+      	var pyrmont = {lat: laty, lng: long};
         map = new google.maps.Map(document.getElementById('map'), {
           center: pyrmont,
           zoom: 15
