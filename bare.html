@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Que vamos hacer?</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>	
+
+		<script type="text/javascript">
+
+
+		// /* Javascript back-end for Quevamosahacer? */
+
+		// //  Stores amount of friends
+		// var numUser = undefined;
+		// // Stores possible choices list
+		// var options = new Array;
+		// // Stores budget
+		// var budget = undefined;
+		// // Stores max distance
+		// var distance = undefined;
+		// // Stores winner for IRV do-while
+		// var winner = undefined;
+
+
+		// // General input helper
+		// function get_input(item) {
+		// 	return prompt(item);
+		// }
+
+		// // Get number of users
+		// alert("Enter amount of users: ");
+		// numUser = get_input("cantidad");
+		// alert("THis worked");
+		// alert(numUser);
+
+		// // Gets the options for user
+		// alert("Enter your option: ");
+		// for (var i = 0; i < numUser; i++) {
+		//     alert(i + ") ");
+		//     options[i] = new Array(2);
+		// 	options[i][0] = get_input("name");
+		//     options[i][1] = 0;
+		// }
+
+		// // fill array of each users preference
+		// var userArray = new Array(numUser);
+		// for (var i = 0; i < numUser; i++) {
+		// 	userArray[i] = new Array(numUser);
+		// 	for (var k = 0; k < numUser; k++) {
+		// 		userArray[i][k] = get_input();
+		// 	}
+		// }
+
+		// do {
+		//     for (var i in userArray) {
+		//         for (var j in userArray[i]) {
+		//             if (userArray[i][0] == options[j][0]) { // go over options and increment per first choice
+		//                  options[j][1] += 1; // where incrementation is actually done
+		//                  if (options[j][1] >= numUser / 2) { // check whether there is a choice with majority of votes
+		//                      winner = options[j][0]; // store winner
+		//                  }
+		//             }
+		//         }
+		//     }
+		//     if (options[0][1] == options[0][1] == options[0][1]) {
+		//                  	options[Math.floor((Math.random() * numUser))][1] = Math.floor((Math.random() * numUser) + 1);
+		//                  }
+
+		// } while (winner == undefined);
+
+		// alert(winner)
+
+		// /* stubs */
+		// alert("\nuser preference: ");
+		// for (var i = 0; i < numUser; i++) {
+		// 	alert(userArray[i]);
+		// }
+
+		// //Jose part
+		// // Get user budget
+		// alert("\nEnter your budget (in USD): ");
+		// budget = get_input();
+
+		// // Get user distance
+		// alert("\nEnter your max distance: ");
+		// distance = get_input();
+
+		//Israel part
+		// Get user position
+		    var map;
+		    var infowindow;
+		    // Stores Google maps key API
+			var YOUR_API_KEY = "AIzaSyBRjK73kGLkj1RziDOm5PCvRUjUGUs3ILc";
+			// Stores users Latitude
+			var laty = 18.238819690330846;
+			// Stores users Longitude
+			var lony = -66.00637533016432;
+			//Stores Users Altitude
+			var alt;
+
+			// // Get user position
+			// var locationSuccess = function (pos) {
+			// var coordinates = pos.coords;
+			//     console.log('MY location= lat:' + coordinates.latitude + ', long: ' + coordinates.longitude + ', alt: ' + coordinates.altitude);
+			//     laty = coordinates.latitude.toFixed(2);
+			//     lony = coordinates.longitude.toFixed(2);
+			//     alt = coordinates.altitude.toFixed(2);	
+			// };
+			// var locationError = function (err) {
+			// console.warn('location error (' + err.code + '): ' + err.message);
+			// };
+			// if (navigator && navigator.geolocation) {
+			// navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {maximumAge:0, timeout:5000, enableHighAccuracy:true});
+			// } else {
+			// console.log('No geolocation');
+			// }
+
+			// Search google for top_hit
+		     
+		    function initMap() {
+		     	var pyrmont = {lat: laty, lng: lony};
+		        map = new google.maps.Map(document.getElementById('map'), {
+		          center: pyrmont,
+		          zoom: 15
+		    });
+
+		    infowindow = new google.maps.InfoWindow();
+		    var service = new google.maps.places.PlacesService(map);
+		    service.nearbySearch({
+		    location: pyrmont,
+		        radius: 1000,
+		        }, callback);
+		        type: ['restaurant']
+		    }
+
+		    function callback(results, status) {
+		        if (status === google.maps.places.PlacesServiceStatus.OK) {
+		    	    for (var i = 0; i < results.length; i++) {
+		        		   createMarker(results[i]);
+		        	}
+		        }
+		    }
+
+			function createMarker(place) {
+			    var placeLoc = place.geometry.location;
+			    var marker = new google.maps.Marker({
+			      map: map,
+			      position: place.geometry.location
+			    });
+
+			    google.maps.event.addListener(marker, 'click', function() {
+			      infowindow.setContent(place.name);
+			      infowindow.open(map, this);
+			    });
+			}
+
+			/*
+				var input = document.querySelector('input');
+		 		var category = document.getElementById("category");
+		 		var name = document.getElementById("name");
+		 		var cant = document.getElementById("quantity");
+
+				
+
+				name.addEventListener("click", function(){ alert("Hello World!"); });
+		 		document.addEventListener("change", function() {
+					sessionStorage.setItem('category', category);
+		 			sessionStorage.setItem('name', name);
+		 			sessionStorage.setItem('amount', cant);
+		 			sessionStorage.setItem('test', 2);
+		 			alert(category);
+		 		});
+		 	*/	
+		</script> 
+	</head>
+	<body>
+		<h2>Category:</h2>
+			<br>
+				<input type="text" name="category" >
+			<br>
+		<h2>Name:</h2>
+			<br>
+				<input type="text" name="name">
+			<br>
+	 	<h2>How many people?</h2>
+	 		<br>
+	 			<input type="number" name="quantity" id="quantity"  min="1">
+	 		<br>
+		<input type="submit" name="Submit" id="submit" value="Submit" onclick="initMap()">
+        <p id="algo" ></p>
+        <div id="map"></div>
+        <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRjK73kGLkj1RziDOm5PCvRUjUGUs3ILc&libraries=places&callback=initMap" async defer></script>
+
+	</body>
+</html>
+
