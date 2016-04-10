@@ -10,6 +10,15 @@ var budget = undefined;
 var distance = undefined;
 // Stores winner for IRV do-while
 var winner = undefined;
+// Stores Google maps key API
+var YOUR_API_KEY = "AIzaSyBRjK73kGLkj1RziDOm5PCvRUjUGUs3ILc";
+// Stores users Latitude
+var lat;
+// Stores users Longitude
+var lon;
+//Stores Users Altitude
+var alt;
+
 
 // General input helper
 function get_input() {
@@ -78,5 +87,52 @@ print("\nEnter your max distance: ");
 distance = get_input();
 
 //Israel part
+// Get user position
+// GET Position
+var locationSuccess = function (pos) {
+var coordinates = pos.coords;
+    console.log('MY location= lat:' + coordinates.latitude + ', long: ' + coordinates.longitude + ', alt: ' + coordinates.altitude);
+    lat = coordinates.latitude.toFixed(2);
+    lon = coordinates.longitude.toFixed(2);
+    alt = coordinates.altitude.toFixed(2);
+// TODO
+};
+var locationError = function (err) {
+console.warn('location error (' + err.code + '): ' + err.message);
+};
+if (navigator && navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {maximumAge:60000, timeout:5000, enableHighAccuracy:true});
+} else {
+console.log('No geolocation');
+}
+
 // Search google for top_hit
-function googleSearch() {};
+function googleSearch() {
+	var map;
+	var infowindow;
+
+	function initMap() {
+	  var pyrmont = {lat: lat, lng: lon};
+
+	  map = new google.maps.Map(document.getElementById('map'), {
+	    center: pyrmont,
+	    zoom: 15
+	  });
+
+	  infowindow = new google.maps.InfoWindow();
+	  var service = new google.maps.places.PlacesService(map);
+	  service.nearbySearch({
+	    location: pyrmont,
+	    radius: 500,
+	    type: ['store']
+	  }, callback);
+	}
+
+	function callback(results, status) {
+	  if (status === google.maps.places.PlacesServiceStatus.OK) {
+	    for (var i = 0; i < results.length; i++) {
+	      createMarker(results[i]);
+	    }
+	  }
+	}
+}
