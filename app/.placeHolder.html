@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Qué vamo hacer? </title>
+    <title>Qonsensus </title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,8 +19,8 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +30,19 @@
     <![endif]-->
 
     <!-- JavaScript file -->
+   <script type="text/javascript" src="app/js/QueVamosHacel.js"></script>
+   <meta name="theme-color" content="2C3E50">
+   <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <link rel="manifest" href="/manifest.json">
+ 
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
     
+   <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+   <meta name="msapplication-TileColor" content="#2F3BA2"></title>
 </head>
 
 <body id="page-top" class="index">
@@ -54,61 +66,41 @@
     <header>
         <div class="container" style="padding-bottom:5%" >
             <div class="row">"
-    
-                    <div class="intro-text" align="center">
-                        <span class="name" > <center>Group consensus for activity planning</center></span>
-                        <form class="form-inline" role="form">
-                        <div class="form-group">
-                        <label for="cantidad">How many people?(2-25)</label>
-                        <input type="tel" class="form-control" id="cantidad" value="" min=2 max=25 onKeyUp="if(this.value>25){this.value='25';}else if(this.value<2){this.value='2';}">
-                            
-                            
-                         <script src="/wp-includes/js/addInput.js" language="Javascript" type="text/javascript"></script>
-                         <br>
-                         <br>
-                         <label for "name">Give a unique name for your activity:</label>
-                        <input type="text" class="unique-name" id="name"onclick="options(this.value)">
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-default" id="submit-btn" onclick="getURL()">Submit</button>
-
-                    </form> 
-
-                    <div id="map"></div>
-     <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRjK73kGLkj1RziDOm5PCvRUjUGUs3ILc&libraries=places&callback=initMap" async defer></script>
-                        <br>
-                        <br>
-                        <br>
-
-                        </div>
-
-                            
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-                            
-
+        <form>    
+    <script language="javascript" type="text/javascript" src="asd.js"></script>
+        <script>
+        var cant = storage.getItem("amount");
+            prompt(cant);       
+            function loop() {
+             for(var i=0; i<=cant; i++) {
+​
+              alert(cant);
+              //insert form
+                document.createElement("BUTTON");
+                }
+            }
+        </script>
+​
         
-</div>
+        <input type="submit" value="Submit">
+        </form>
+        </div>
+        </div>
+<body>
+    <div id="e"></div>
+​
+</body>
  
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>Hackturabo</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-
-                        <div id="url-results" style="display:none" >
+                    <div id="url-results" style="display:none" >
+                        <div class="footer-col col-md-4">
 
 
-                            <h1>TESTING!!</h1>
-                        </div>
+
 
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
@@ -128,8 +120,13 @@
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
                             </li>
                         </ul>
+                        </div>
                     </div>
                     <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Hackturabo</p>
+                    </div>
+                    <div class="footer-col col-md-4" align="right">
                         <h3>About Qonsensus</h3>
                         <p>Qonsensus is an open source web app where a group of friends or co-workers can 
                         reach consensus with suggestions which our app weighs and decides on a winnner<br><a href="https://github.com/asvnpr/hackturabo2016">See Source</a>.</p>
@@ -141,7 +138,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                        Copyright &copy; Your Website 2014
                     </div>
                 </div>
             </div>
@@ -174,15 +171,15 @@
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
-                                    <strong><a href="https://startbootstrap.com">Start Bootstrap</a>
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong><a href="https://startbootstrap.com">April 2014</a>
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong><a href="https://startbootstrap.com">Web Development</a>
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -381,7 +378,8 @@
 
     <!-- jQuery -->
     <script src="js/jquer"y.js"></script>
-
+    
+    <script src="js/pageHandle.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -397,7 +395,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
     <script src="js/getURL.js"></script>
-
 </body>
 
 </html>
