@@ -4,9 +4,11 @@
 var numUser = 0;
 // Stores possible choices list
 var options = new Array;
+// Stores budget
+var budget = undefined;
 
 // General input helper
-function get_input(item) {
+function get_input() {
 	var item = readline();
 	return item;
 }
@@ -46,7 +48,13 @@ for (var i = 0; i < numUser; i++) {
 
 //Jose part
 // Get user budgets
-function budget() {};
+print("\nEnter your budget (in USD): ")
+function getBudget() {
+    var budget = get_input();
+    return budget;
+};
+getBudget();
+
 // Get user distance
 function distance() {};
 
