@@ -15,6 +15,7 @@ function get_input(item) {
 print("Enter amount of users: ");
 numUser = get_input();
 
+// Gets the options for user
 print("Enter your option: ");
 for (var i = 0; i < numUser; i++) {
 	print(i + ") ");
@@ -43,3 +44,12 @@ for (var i = 0; i < numUser; i++) {
 	print(userArray[i]);
 }
 
+//Jose part
+// Get user budgets
+function budget() {};
+// Get user distance
+function distance() {};
+
+//Israel part
+// Search google for top_hit
+function googleSearch() {};
