@@ -19,8 +19,8 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +30,7 @@
     <![endif]-->
 
     <!-- JavaScript file -->
-   <script type="text/javascript" src="js/QueVamosHacel.js"></script>
+   <script type="text/javascript" src="app/js/QueVamosHacel.js"></script>
    <meta name="theme-color" content="2C3E50">
    <link rel="stylesheet" type="text/css" href="styles/inline.css">
     <link rel="manifest" href="/manifest.json">
@@ -65,41 +65,31 @@
     <!-- Header -->
     <header>
         <div class="container" style="padding-bottom:5%" >
-            <div class="row">
-    
-                    <div class="intro-text" align="center">
-                        <span class="name" > <center>Group consensus for activity planning</center></span>
-                        <form class="form-inline" role="form">
-                        <div class="form-group">
-                        <label for="cantidad">How many people?(2-25)</label>
-                        <input type="tel" class="form-control" id="cantidad" value="" min=2 max=25 onKeyUp="if(this.value>25){this.value='25';}else if(this.value<2){this.value='2';}">
-                            
-                            
-                         <br>
-                         <br>
-                         <label for "name">Give a unique name for your activity:</label>
-                        <input type="text" class="unique-name" id="name"onclick="options(this.value)">
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-default" id="submit-btn" onclick="getURL()">Submit</button>
-
-                    </form> 
-                        <br>
-                        <br>
-                        <br>
-
-                        </div>
-
-                            
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-                            
-
+            <div class="row">"
+        <form>    
+    <script language="javascript" type="text/javascript" src="asd.js"></script>
+        <script>
+        var cant = storage.getItem("amount");
+            prompt(cant);       
+            function loop() {
+             for(var i=0; i<=cant; i++) {
+​
+              alert(cant);
+              //insert form
+                document.createElement("BUTTON");
+                }
+            }
+        </script>
+​
         
-</div>
+        <input type="submit" value="Submit">
+        </form>
+        </div>
+        </div>
+<body>
+    <div id="e"></div>
+​
+</body>
  
     <!-- Footer -->
     <footer class="text-center">
@@ -107,27 +97,27 @@
             <div class="container">
                 <div class="row">
                     <div id="url-results" style="display:none" >
-                            
                         <div class="footer-col col-md-4">
 
 
 
 
-                        <h3>Share or scan your link: </h3>
+                        <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//qonsensus.website/.placeHolder.html" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/share?url=https%3A//qonsensus.website/.placeHolder.html" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/home?status=https%3A//qonsensus.website/.placeHolder.html" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
-                            <br>
-                            <br>
                             <li>
-                                <img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fqonsensus.website%2F.placeHolder.html&chs=180x180&choe=UTF-8&chld=L|2" rel="nofollow" alt="qr code"><a href="https://qonsensus.website/.placeHolder.html" border='0' style='cursor:default'  rel='nofollow'></a>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
                             </li>
                         </ul>
                         </div>
@@ -387,14 +377,14 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquer"y.js"></script>
     
-    <script src="js/fileHandle.js"></script>
+    <script src="js/pageHandle.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript" -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
