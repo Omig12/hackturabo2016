@@ -21,38 +21,29 @@ var alt;
 
 
 // General input helper
-function get_input() {
-	var item = readline();
-	return item;
+function get_input(item) {
+	return document.getElementById(item);
 }
 
 // Get number of users
 print("Enter amount of users: ");
-numUser = get_input();
+numUser = get_input("cantidad");
 
 // Gets the options for user
 print("Enter your option: ");
 for (var i = 0; i < numUser; i++) {
     print(i + ") ");
     options[i] = new Array(2);
-	options[i][0] = get_input();
+	options[i][0] = get_input("name");
     options[i][1] = 0;
 }
-
-/*borrar*/
-function msg(){
-
-	print("Filling you with malanga!");
-}
-msg();
-/*borrar*/
 
 // fill array of each users preference
 var userArray = new Array(numUser);
 for (var i = 0; i < numUser; i++) {
 	userArray[i] = new Array(numUser);
 	for (var k = 0; k < numUser; k++) {
-		userArray[i][k] = "Malanga";
+		userArray[i][k] = get_input();
 	}
 }
 
